@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42AE77442AE0EA6E00704162 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE77432AE0EA6E00704162 /* CircularProgressView.swift */; };
+		42AE77472AE0ED3900704162 /* CapturePrimaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE77462AE0ED3900704162 /* CapturePrimaryView.swift */; };
+		42AE77492AE0F35200704162 /* TimedMessageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE77482AE0F35200704162 /* TimedMessageList.swift */; };
+		42AE774B2AE0F92600704162 /* FeedbackMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE774A2AE0F92600704162 /* FeedbackMessages.swift */; };
+		42AE774D2AE0FD7C00704162 /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE774C2AE0FD7C00704162 /* OnboardingState.swift */; };
+		42AE774F2AE1162A00704162 /* CaptureOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE774E2AE1162A00704162 /* CaptureOverlayView.swift */; };
+		42AE77512AE118B500704162 /* CaptureOverlayView_Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE77502AE118B500704162 /* CaptureOverlayView_Buttons.swift */; };
+		42AE77542AE1193700704162 /* CaptureOverlay+LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE77532AE1193700704162 /* CaptureOverlay+LocalizedString.swift */; };
+		42AE77572AE12B1600704162 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE77562AE12B1600704162 /* OnboardingView.swift */; };
+		42AE77592AE12EDA00704162 /* OnboardingStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AE77582AE12EDA00704162 /* OnboardingStateMachine.swift */; };
+		42CAEB4D2AE21DEC00F23561 /* OnboardingTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CAEB4C2AE21DEC00F23561 /* OnboardingTutorialView.swift */; };
+		42CAEB4F2AE21F8700F23561 /* OnboardingTutorialView+LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CAEB4E2AE21F8700F23561 /* OnboardingTutorialView+LocalizedString.swift */; };
+		42CAEB512AE23A1400F23561 /* OnboardingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CAEB502AE23A1400F23561 /* OnboardingButtonView.swift */; };
+		42CAEB532AE23C6200F23561 /* OnboardingView+LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CAEB522AE23C6200F23561 /* OnboardingView+LocalizedString.swift */; };
 		42D042F02ADE944400A5C28E /* ObjectCaptureProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D042EF2ADE944400A5C28E /* ObjectCaptureProjectApp.swift */; };
 		42D042F22ADE944400A5C28E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D042F12ADE944400A5C28E /* ContentView.swift */; };
 		42D042F42ADE944500A5C28E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42D042F32ADE944500A5C28E /* Assets.xcassets */; };
@@ -17,6 +31,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42AE77432AE0EA6E00704162 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		42AE77462AE0ED3900704162 /* CapturePrimaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePrimaryView.swift; sourceTree = "<group>"; };
+		42AE77482AE0F35200704162 /* TimedMessageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimedMessageList.swift; sourceTree = "<group>"; };
+		42AE774A2AE0F92600704162 /* FeedbackMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackMessages.swift; sourceTree = "<group>"; };
+		42AE774C2AE0FD7C00704162 /* OnboardingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingState.swift; sourceTree = "<group>"; };
+		42AE774E2AE1162A00704162 /* CaptureOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureOverlayView.swift; sourceTree = "<group>"; };
+		42AE77502AE118B500704162 /* CaptureOverlayView_Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureOverlayView_Buttons.swift; sourceTree = "<group>"; };
+		42AE77532AE1193700704162 /* CaptureOverlay+LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaptureOverlay+LocalizedString.swift"; sourceTree = "<group>"; };
+		42AE77562AE12B1600704162 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		42AE77582AE12EDA00704162 /* OnboardingStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStateMachine.swift; sourceTree = "<group>"; };
+		42CAEB4C2AE21DEC00F23561 /* OnboardingTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTutorialView.swift; sourceTree = "<group>"; };
+		42CAEB4E2AE21F8700F23561 /* OnboardingTutorialView+LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingTutorialView+LocalizedString.swift"; sourceTree = "<group>"; };
+		42CAEB502AE23A1400F23561 /* OnboardingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButtonView.swift; sourceTree = "<group>"; };
+		42CAEB522AE23C6200F23561 /* OnboardingView+LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingView+LocalizedString.swift"; sourceTree = "<group>"; };
 		42D042EC2ADE944400A5C28E /* ObjectCaptureProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectCaptureProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42D042EF2ADE944400A5C28E /* ObjectCaptureProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectCaptureProjectApp.swift; sourceTree = "<group>"; };
 		42D042F12ADE944400A5C28E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +66,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42AE77422AE0EA2800704162 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				42AE77432AE0EA6E00704162 /* CircularProgressView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		42AE77452AE0EAC700704162 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				42AE77552AE12AFF00704162 /* OnboardingView */,
+				42AE77522AE1190B00704162 /* CaptureOverlay */,
+				42D042F12ADE944400A5C28E /* ContentView.swift */,
+				42AE77462AE0ED3900704162 /* CapturePrimaryView.swift */,
+				42CAEB4E2AE21F8700F23561 /* OnboardingTutorialView+LocalizedString.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		42AE77522AE1190B00704162 /* CaptureOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				42AE774E2AE1162A00704162 /* CaptureOverlayView.swift */,
+				42AE77502AE118B500704162 /* CaptureOverlayView_Buttons.swift */,
+				42AE77532AE1193700704162 /* CaptureOverlay+LocalizedString.swift */,
+			);
+			path = CaptureOverlay;
+			sourceTree = "<group>";
+		};
+		42AE77552AE12AFF00704162 /* OnboardingView */ = {
+			isa = PBXGroup;
+			children = (
+				42AE77562AE12B1600704162 /* OnboardingView.swift */,
+				42CAEB4C2AE21DEC00F23561 /* OnboardingTutorialView.swift */,
+				42CAEB502AE23A1400F23561 /* OnboardingButtonView.swift */,
+				42CAEB522AE23C6200F23561 /* OnboardingView+LocalizedString.swift */,
+			);
+			path = OnboardingView;
+			sourceTree = "<group>";
+		};
 		42D042E32ADE944400A5C28E = {
 			isa = PBXGroup;
 			children = (
@@ -57,10 +126,11 @@
 		42D042EE2ADE944400A5C28E /* ObjectCaptureProject */ = {
 			isa = PBXGroup;
 			children = (
+				42AE77452AE0EAC700704162 /* View */,
+				42AE77422AE0EA2800704162 /* Component */,
 				42D043022ADE97F200A5C28E /* ViewModel */,
 				42D042FF2ADE970900A5C28E /* Model */,
 				42D042EF2ADE944400A5C28E /* ObjectCaptureProjectApp.swift */,
-				42D042F12ADE944400A5C28E /* ContentView.swift */,
 				42D042F32ADE944500A5C28E /* Assets.xcassets */,
 				42D042F52ADE944500A5C28E /* Preview Content */,
 			);
@@ -79,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				42D043002ADE971800A5C28E /* ShotFileInfo.swift */,
+				42AE774A2AE0F92600704162 /* FeedbackMessages.swift */,
+				42AE774C2AE0FD7C00704162 /* OnboardingState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -88,6 +160,8 @@
 			children = (
 				42D042FD2ADE94B100A5C28E /* AppDataModel.swift */,
 				42D043032ADE980700A5C28E /* CaptureFolderManager.swift */,
+				42AE77482AE0F35200704162 /* TimedMessageList.swift */,
+				42AE77582AE12EDA00704162 /* OnboardingStateMachine.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -162,11 +236,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42AE77542AE1193700704162 /* CaptureOverlay+LocalizedString.swift in Sources */,
+				42AE77512AE118B500704162 /* CaptureOverlayView_Buttons.swift in Sources */,
 				42D042FE2ADE94B100A5C28E /* AppDataModel.swift in Sources */,
+				42AE774F2AE1162A00704162 /* CaptureOverlayView.swift in Sources */,
+				42AE77592AE12EDA00704162 /* OnboardingStateMachine.swift in Sources */,
+				42CAEB512AE23A1400F23561 /* OnboardingButtonView.swift in Sources */,
 				42D043042ADE980700A5C28E /* CaptureFolderManager.swift in Sources */,
+				42AE774D2AE0FD7C00704162 /* OnboardingState.swift in Sources */,
+				42AE77472AE0ED3900704162 /* CapturePrimaryView.swift in Sources */,
+				42CAEB532AE23C6200F23561 /* OnboardingView+LocalizedString.swift in Sources */,
 				42D042F22ADE944400A5C28E /* ContentView.swift in Sources */,
+				42CAEB4D2AE21DEC00F23561 /* OnboardingTutorialView.swift in Sources */,
+				42AE774B2AE0F92600704162 /* FeedbackMessages.swift in Sources */,
+				42CAEB4F2AE21F8700F23561 /* OnboardingTutorialView+LocalizedString.swift in Sources */,
 				42D042F02ADE944400A5C28E /* ObjectCaptureProjectApp.swift in Sources */,
+				42AE77492AE0F35200704162 /* TimedMessageList.swift in Sources */,
+				42AE77442AE0EA6E00704162 /* CircularProgressView.swift in Sources */,
 				42D043012ADE971800A5C28E /* ShotFileInfo.swift in Sources */,
+				42AE77572AE12B1600704162 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,9 +30,36 @@ class CaptureFolderManager: ObservableObject {
 
     @Published var shots: [ShotFileInfo] = []
     
+    init?() {
+        guard let newFolder = CaptureFolderManager.createNewScanDirectory() else {
+            logger.error("Unable to create a new scan directory.")
+            return nil
+        }
+        rootScanFolder = newFolder
+
+        // Creates the subdirectories.
+        imagesFolder = newFolder.appendingPathComponent("Images/")
+        guard CaptureFolderManager.createDirectoryRecursively(imagesFolder) else {
+            return nil
+        }
+
+        snapshotsFolder = newFolder.appendingPathComponent("Snapshots/")
+        guard CaptureFolderManager.createDirectoryRecursively(snapshotsFolder) else {
+            return nil
+        }
+
+        modelsFolder = newFolder.appendingPathComponent("Models/")
+        guard CaptureFolderManager.createDirectoryRecursively(modelsFolder) else {
+            return nil
+        }
+    }
     
-    /// Creates a new Scans directory based on the current timestamp in the top level Documents
-    /// folder.
+    
+    // Constants this sample appends in front of the capture id to get a file basename.
+    private static let imageStringPrefix = "IMG_"
+    private static let heicImageExtension = "HEIC"
+    
+    /// 새롭게 스캔할 데이터를 저장할 폴더 생성 및 URL 제공
     /// - Returns: The new Scans folder's file URL, or `nil` on error.
     static func createNewScanDirectory() -> URL? {
         guard let capturesFolder = rootScansFolder() else {
@@ -61,6 +88,72 @@ class CaptureFolderManager: ObservableObject {
         }
 
         return newCaptureDir
+    }
+    
+    /// Retrieves the image id from of an existing file at a URL.\
+    ///
+    /// - Parameter url: URL of the photo for which this method returns the image id.
+    /// - Returns: The image ID if `url` is valid; otherwise `nil`.
+    static func parseShotId(url: URL) -> UInt32? {
+        let photoBasename = url.deletingPathExtension().lastPathComponent
+        logger.debug("photoBasename = \(photoBasename)")
+
+        guard let endOfPrefix = photoBasename.lastIndex(of: "_") else {
+            logger.warning("Can't get endOfPrefix!")
+            return nil
+        }
+
+        let imgPrefix = photoBasename[...endOfPrefix]
+        guard imgPrefix == imageStringPrefix else {
+            logger.warning("Prefix doesn't match!")
+            return nil
+        }
+
+        let idString = photoBasename[photoBasename.index(after: endOfPrefix)...]
+        guard let id = UInt32(idString) else {
+            logger.warning("Can't convert idString=\"\(idString)\" to uint32!")
+            return nil
+        }
+
+        return id
+    }
+    
+    // - MARK: Private interface below.
+
+    /// Creates all path components for the output directory.
+    /// - Parameter outputDir: A URL for the new output directory.
+    /// - Returns: A Boolean value that indicates whether the method succeeds,
+    /// otherwise `false` if it encounters an error, such as if the file already
+    /// exists or the method couldn't create the file.
+    private static func createDirectoryRecursively(_ outputDir: URL) -> Bool {
+        guard outputDir.isFileURL else {
+            return false
+        }
+        let expandedPath = outputDir.path
+        var isDirectory: ObjCBool = false
+        let fileManager = FileManager()
+        guard !fileManager.fileExists(atPath: outputDir.path, isDirectory: &isDirectory) else {
+            logger.error("File already exists at \(expandedPath, privacy: .private)")
+            return false
+        }
+
+        logger.log("Creating dir recursively: \"\(expandedPath, privacy: .private)\"")
+
+        let result: ()? = try? fileManager.createDirectory(atPath: expandedPath,
+                                                           withIntermediateDirectories: true)
+
+        guard result != nil else {
+            return false
+        }
+
+        var isDir: ObjCBool = false
+        guard fileManager.fileExists(atPath: expandedPath, isDirectory: &isDir) && isDir.boolValue else {
+            logger.error("Dir \"\(expandedPath, privacy: .private)\" doesn't exist after creation!")
+            return false
+        }
+
+        logger.log("... success creating dir.")
+        return true
     }
     
     /// 캡쳐한 사진을 저장해 놓을 루트 경로

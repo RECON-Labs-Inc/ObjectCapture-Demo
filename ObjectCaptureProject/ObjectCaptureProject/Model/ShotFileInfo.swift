@@ -14,7 +14,11 @@ struct ShotFileInfo:Identifiable {
     init?(url:URL) {
         fileURL = url
         
-        
+        guard let shotID = CaptureFolderManager.parseShotId(url: url) else {
+            return nil
+        }
+
+        id = shotID
         
     }
 }
